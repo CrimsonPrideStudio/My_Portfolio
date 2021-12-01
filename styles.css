@@ -231,6 +231,25 @@ section .title span{
     padding-bottom: 8px;
 }
 
+section .title span::before,
+section .title span::after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: var(--primary-color);
+    left: 0;
+    bottom: 0;
+
+}
+
+section .title span::after{
+    bottom: -7px;
+    width: 70%;
+    left: -20%;
+    transform: translateX(50%);
+}
+
 
 
 .about .about-details{
@@ -239,4 +258,148 @@ section .title span{
     align-items: center;
 
 }
+
+.about .about-details .left{
+    width: 45%;
+}
+
+.about .left img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 20x;
+}
+
+.about .about-details .right{
+    width: 55%;
+
+}
+
+section .topic{
+    color: var(--black-color);
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.about-details .right p{
+    text-align: justify;
+    color: var(--black-color);
+}
+
+section .button{
+    margin: 16px 0;
+}
+
+section .button button{
+    outline: none;
+    padding: 8px 12px;
+    font-size: 20px;
+    font-weight: 400;
+    background: var(--primary-color);
+    color: var(--white-color);
+    border: solid transparent;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+section .button button:hover{
+    border-color: var(--primary-color);
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+
+/* my skills styling */
+
+.skills{
+    background: #f0f8ff;
+}
+
+.skills .content{
+    padding: 50px 0;
+}
+
+.skills .skills-details{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.skills-details .text{
+    width: 50%;
+    
+}
+
+.skills-details p{
+    color: var(--black-color);
+    text-align: justify;
+}
+
+.skills .skills-details .experience{
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+} 
+
+
+.skills-details .experience .num{
+    color: var(--black-color);
+    font-size: 70px;
+}
+
+.skills-details .experience .exp{
+    color: var(--black-color);
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 20px;
+    margin: 0 6px;
+}
+
+.skills-details .boxes{
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skills-details .box{
+    width: calc(100%/2 - 20px);
+    margin: 20px 0;
+}
+
+.skills-details .boxes .topic{
+    font-size: 20px;
+    color: var(--primary-color);
+} 
+
+.skills-details .boxes .per{
+    font-size: 40px;
+    color: var(--primary-color);
+}
+
+
+/* services styling */
+
+
+.services .boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.services .boxes .box{
+    margin: 20px 0;
+
+    width: calc(100%/3 - 20px);
+    
+    text-align: center;
+    border-radius: 12px;
+    padding: 30px 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.12);
+    cursor: default;
+    transition: all 0.4s ease;
+}
+
 
