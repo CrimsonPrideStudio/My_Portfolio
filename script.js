@@ -57,7 +57,7 @@ for(var i =0; i < navLinks.length; i++){
 let a =document.getElementsByClassName("ab")
 
 
-setInterval(myTimer, 1);
+setInterval(myTimer, 1 );
 
 function myTimer() {
   const d = new Date();
