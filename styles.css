@@ -81,8 +81,11 @@ nav .navbar .menu li{
     margin: 0 18px;
 }
 
+.ab{
+ font-size:18px;
+}
 nav .navbar .menu a{
-    font-size: 18px;
+    
     font-weight: 500;
     color: var(--black-color);
     padding: 6px 0;
@@ -557,14 +560,15 @@ footer .text span a:hover{
     }
 
     nav .navbar .menu a{
-        font-size: 23px;
+        font-size: 0px;
         display: block;
         color: var(--white-color);
+        
         margin: 10px 0;
     }
 
-    nav.sticky .menu a:hover{
-        color: var(--primary-color);
+    nav .navbar .menu a:hover{
+        color:#0026ff;
     }
 
     nav .navbar .media-icons{

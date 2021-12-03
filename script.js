@@ -46,9 +46,28 @@ cancelBtn.onclick = function(){
 
 let navLinks = document.querySelectorAll(".menu li a");
 for(var i =0; i < navLinks.length; i++){
-    navLinks[i],addEventListener("click",function(){
-      navBar.classList.remove("active");
-      menuBtn.style.opacity="1";
-      menuBtn.sytle.pointerEvents = "auto";
+    navLinks[i].addEventListener("click",function(){
+        navBar.classList.remove("active");
+        menuBtn.sytle.opacity = "1";
+        menuBtn.sytle.pointerEvents = "auto";
+        body.style.overflowX = "auto";
+        scrollBtn.style.pointerEvents = "auto";
 })
+}
+let a =document.getElementsByClassName("ab")
+
+
+setInterval(myTimer, 1);
+
+function myTimer() {
+  const d = new Date();
+  for (let index = 0; index < a.length; index++) {
+    const element = a[index];
+    console.log(element.style)
+    if(window.scrollY!=0){
+        element.style.fontSize="0"
+    }else{
+        element.style.fontSize="18px"
+    }
+}
 }
