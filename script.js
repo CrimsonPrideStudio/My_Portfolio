@@ -66,7 +66,9 @@ function myTimer() {
     console.log(element.style)
     if(window.scrollY!=0){
         element.style.fontSize="0"
+        nav.style.backgroundColor ="#fff"
     }else{
+        nav.style.backgroundColor ="transparent"
         element.style.fontSize="18px"
     }
 }

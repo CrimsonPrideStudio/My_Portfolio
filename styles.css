@@ -43,9 +43,12 @@ body{
 nav{
     position: fixed;
     width: 100%;
+    background-color:transparent;
     padding: 20px 0;
     z-index: 999;
+    height: 20px;
     transition: all 0.3s ease;
+
 }
 
 nav .sticky{
@@ -54,11 +57,14 @@ nav .sticky{
 }
 
 nav .navbar{
+    margin-top: -20px !important;
     width: 90%;
     display: flex;
+    
     justify-content: space-between;
     align-items: center;
     margin: auto;
+   
 }
 
 nav .navbar .logo a{
