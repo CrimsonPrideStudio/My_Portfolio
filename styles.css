@@ -562,7 +562,7 @@ footer .text span a:hover{
     }
 
     .navbar.active .menu{
-        left: 0;
+        left: 0px;
     }
 
     nav .navbar .menu a{
@@ -640,6 +640,11 @@ footer .text span a:hover{
         color: var(--primary-color);
 
     }
+    
+    .navbar.active .menu{
+        left: -100px;
+    }
+
     
 }
 

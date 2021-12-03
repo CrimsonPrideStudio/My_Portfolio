@@ -2,7 +2,7 @@
 
 let nav = document.querySelector("nav");
 let scrollBtn = document.querySelector(".scroll-button a");
-
+let isClickable = true;
 let val;
 
 
@@ -27,11 +27,22 @@ let cancelBtn = document.querySelector(".cancel-btn");
 
 
 menuBtn.onclick = function(){
-    navBar.classList.add("active");
-    menuBtn.sytle.opacity = "0";
-    menuBtn.sytle.pointerEvents = "none";
-    body.style.overflowX = "hidden";
-    scrollBtn.style.pointerEvents = "none";
+    if(isClickable){
+
+        navBar.classList.add("active");
+        menuBtn.sytle.opacity = "0";
+        menuBtn.sytle.pointerEvents = "none";
+        body.style.overflowX = "hidden";
+        scrollBtn.style.pointerEvents = "none";
+        isClickable =false;
+    }else{
+        navBar.classList.remove("active");
+        menuBtn.sytle.opacity = "1";
+        menuBtn.sytle.pointerEvents = "auto";
+        body.style.overflowX = "auto";
+        scrollBtn.style.pointerEvents = "auto";   
+        isClickable = true;
+    }
 }
 
 cancelBtn.onclick = function(){
@@ -40,6 +51,7 @@ cancelBtn.onclick = function(){
     menuBtn.sytle.pointerEvents = "auto";
     body.style.overflowX = "auto";
     scrollBtn.style.pointerEvents = "auto";
+    console.log("true")
 }
 
 // side navigation bar close while we click on navigation links
@@ -63,11 +75,13 @@ function myTimer() {
   const d = new Date();
   for (let index = 0; index < a.length; index++) {
     const element = a[index];
-    console.log(element.style)
+    
     if(window.scrollY!=0){
         element.style.fontSize="0"
         nav.style.backgroundColor ="#fff"
+        isClickable = false;
     }else{
+        isClickable = true;
         nav.style.backgroundColor ="transparent"
         element.style.fontSize="18px"
     }
